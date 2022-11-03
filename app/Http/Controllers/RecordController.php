@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Record;
 use Illuminate\Http\Request;
 
 class RecordController extends Controller
@@ -11,33 +12,17 @@ class RecordController extends Controller
         return view('records.index');
     }
 
-    public function create()
+    public function records()
     {
-        //
+        $data = Record::orderBy('id', 'desc')->limit(120)->get();
+
+        return response()->json($data);
     }
 
-    public function store(Request $request)
+    public function devices($id)
     {
-        //
-    }
+        $data = Record::where('device_id', $id)->pluck('device_id');
 
-    public function show($id)
-    {
-        //
-    }
-
-    public function edit($id)
-    {
-        //
-    }
-
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    public function destroy($id)
-    {
-        //
+        return response()->json($data);
     }
 }
