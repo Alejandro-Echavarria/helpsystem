@@ -7,8 +7,8 @@ window.addEventListener('load', (event) => {
 
 const recallData = () => {
 
-    setInterval(devices, 30000);
-    setInterval(records, 30000);
+    setInterval(devices, 15000);
+    setInterval(records, 15000);
 }
 
 const records = () => {
