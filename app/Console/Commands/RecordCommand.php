@@ -72,7 +72,7 @@ class RecordCommand extends Command
             'device_id'  => $faker6->numberBetween(1,5)
         ];
 
-        $data2 = [
+        $data7 = [
             'location'   => $faker7->localIpv4(),
             'pressure'   => $faker7->randomNumber(2, false),
             'heart_rate' => $faker7->randomNumber(2, false),
@@ -80,7 +80,7 @@ class RecordCommand extends Command
             'device_id'  => $faker7->numberBetween(1,5)
         ];
 
-        $data3 = [
+        $data8 = [
             'location'   => $faker8->localIpv4(),
             'pressure'   => $faker8->randomNumber(2, false),
             'heart_rate' => $faker8->randomNumber(2, false),
@@ -88,7 +88,7 @@ class RecordCommand extends Command
             'device_id'  => $faker8->numberBetween(1,5)
         ];
 
-        $data4 = [
+        $data9 = [
             'location'   => $faker9->localIpv4(),
             'pressure'   => $faker9->randomNumber(2, false),
             'heart_rate' => $faker9->randomNumber(2, false),
@@ -109,10 +109,10 @@ class RecordCommand extends Command
         $record3 = Record::create($data3);
         $record4 = Record::create($data4);
         $record5 = Record::create($data5);
-        $record6 = Record::create($data5);
-        $record7 = Record::create($data5);
-        $record8 = Record::create($data5);
-        $record9 = Record::create($data5);
-        $record10 = Record::create($data5);
+        $record6 = Record::create($data6);
+        $record7 = Record::create($data7);
+        $record8 = Record::create($data8);
+        $record9 = Record::create($data9);
+        $record10 = Record::create($data10);
     }
 }
